@@ -1,34 +1,33 @@
 {
-    "name": "agile-fetch",
-    "version": "1.0.2",
-    "description": "A lightweight, fast fetch wrapper with auto-retry, timeout, and better error handling.",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
+  "name": "agile-fetch",
+  "version": "1.0.3",
+  "description": "A lightweight, fast fetch wrapper with auto-retry, timeout, and better error handling.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
       "test": "node test.js"
-    },
-    "repository": {
+  },
+  "repository": {
       "type": "git",
       "url": "git+https://github.com/rizkyngrh23/agile-fetch.git"
-    },
-    "keywords": [
+  },
+  "keywords": [
       "fetch",
       "fast",
       "retry",
       "timeout",
       "error-handling"
-    ],
-    "author": "Your Name",
-    "license": "MIT",
-    "bugs": {
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
       "url": "https://github.com/rizkyngrh23/agile-fetch/issues"
-    },
-    "homepage": "https://github.com/rizkyngrh23/agile-fetch#readme",
-    "dependencies": {
-      "node-fetch": "^3.3.2"
-    },
-    "devDependencies": {
+  },
+  "homepage": "https://github.com/rizkyngrh23/agile-fetch#readme",
+  "dependencies": {
+      "agile-fetch": "^1.0.3"
+  },
+  "devDependencies": {
       "fetch-mock": "^9.11.0"
-    }
   }
-  
+}
