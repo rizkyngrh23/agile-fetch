@@ -1,16 +1,16 @@
-# Fast Fetch 🚀  
+# Agile Fetch 🚀  
 A lightweight, powerful fetch wrapper with auto-retry, timeout, and better error handling.
 
 ## Installation  
 ```sh
-npm install @rizkyngrh23/fast-fetch
+npm install agile-fetch
 ```
 
 ## Usage
 ```js
-import FastFetch from '@rizkyngrh23/fast-fetch';
+import AgileFetch from 'agile-fetch';
 
-const fetcher = new FastFetch({ retries: 3, timeout: 5000 });
+const fetcher = new AgileFetch({ retries: 3, timeout: 5000 });
 
 fetcher.fetchWithRetry('https://jsonplaceholder.typicode.com/posts/1')
   .then(data => console.log(data))
@@ -25,9 +25,9 @@ fetcher.fetchWithRetry('https://jsonplaceholder.typicode.com/posts/1')
 
 ## API
 
-### `new FastFetch(options)`
+### `new AgileFetch(options)`
 
-Creates a new instance of FastFetch.
+Creates a new instance of AgileFetch.
 
 | Option   | Type   | Default | Description                               |
 |----------|--------|---------|-------------------------------------------|
@@ -49,8 +49,8 @@ Fetches a URL with retry and timeout support.
 If you want to contribute or modify the package, clone the repository:
 
 ```sh
-git clone https://github.com/rizkyngrh23/fast-fetch.git
-cd fast-fetch
+git clone https://github.com/rizkyngrh23/agile-fetch.git
+cd agile-fetch
 npm install
 ```
 

@@ -1,6 +1,6 @@
 {
-    "name": "@rizkyngrh23/fast-fetch",
-    "version": "1.0.1",
+    "name": "agile-fetch",
+    "version": "1.0.2",
     "description": "A lightweight, fast fetch wrapper with auto-retry, timeout, and better error handling.",
     "main": "index.js",
     "type": "module",
@@ -9,7 +9,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/rizkyngrh23/fast-fetch.git"
+      "url": "git+https://github.com/rizkyngrh23/agile-fetch.git"
     },
     "keywords": [
       "fetch",
@@ -21,9 +21,9 @@
     "author": "Your Name",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/rizkyngrh23/fast-fetch/issues"
+      "url": "https://github.com/rizkyngrh23/agile-fetch/issues"
     },
-    "homepage": "https://github.com/rizkyngrh23/fast-fetch#readme",
+    "homepage": "https://github.com/rizkyngrh23/agile-fetch#readme",
     "dependencies": {
       "node-fetch": "^3.3.2"
     },
