@@ -1,6 +1,6 @@
 {
-    "name": "fast-fetch",
-    "version": "1.0.0",
+    "name": "@rizkyngrh23/fast-fetch",
+    "version": "1.0.1",
     "description": "A lightweight, fast fetch wrapper with auto-retry, timeout, and better error handling.",
     "main": "index.js",
     "type": "module",
@@ -21,9 +21,9 @@
     "author": "Your Name",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/yourusername/fast-fetch/issues"
+      "url": "https://github.com/rizkyngrh23/fast-fetch/issues"
     },
-    "homepage": "https://github.com/yourusername/fast-fetch#readme",
+    "homepage": "https://github.com/rizkyngrh23/fast-fetch#readme",
     "dependencies": {
       "node-fetch": "^3.3.2"
     },
