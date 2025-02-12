@@ -1,6 +1,6 @@
 {
   "name": "agile-fetch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight, fast fetch wrapper with auto-retry, timeout, and better error handling.",
   "main": "index.js",
   "type": "module",

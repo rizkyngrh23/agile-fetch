@@ -1,4 +1,4 @@
-class TinyFetch {
+class AgileFetch {
     constructor({ retries = 3, timeout = 5000, backoffFactor = 200 } = {}) {
         this.retries = retries;
         this.timeout = timeout;
@@ -29,4 +29,4 @@ class TinyFetch {
     }
 }
 
-export default TinyFetch;
+export default AgileFetch;

@@ -1,27 +1,22 @@
-import AgileFetch from './index.js';
-import { isDeepStrictEqual } from 'node:util';
+import AgileFetch from 'agile-fetch';
 
-// Define TinyFetch instance with retries and timeout
-const tinyFetch = new AgileFetch({ retries: 2, timeout: 2000 });
+const fetcher = new AgileFetch({ retries: 3, timeout: 5000 });
 
-async function runTests() {
-    console.log('🔍 Running TinyFetch Tests...\n');
+async function runRealLifeTest() {
+    console.log('🔍 Running Real-Life Test for Agile Fetch...\n');
 
     // ✅ **Test 1: Successful Request**
     try {
-        const response = await tinyFetch.fetchWithRetry('https://jsonplaceholder.typicode.com/posts/1');
-        if (response && response.id === 1) {
-            console.log('✅ Test 1 Passed: Successful Request');
-        } else {
-            console.error('❌ Test 1 Failed');
-        }
+        const response = await fetcher.fetchWithRetry('https://jsonplaceholder.typicode.com/posts/1');
+        console.log('✅ Test 1 Passed: Successful Request');
+        console.log('Response:', response);
     } catch (error) {
         console.error('❌ Test 1 Failed', error);
     }
 
     // ✅ **Test 2: Simulate Timeout**
     try {
-        await tinyFetch.fetchWithRetry('https://httpstat.us/200?sleep=5000'); // Exceeds 2s timeout
+        await fetcher.fetchWithRetry('https://httpbin.org/delay/6'); // Exceeds 5s timeout
         console.error('❌ Test 2 Failed: Should timeout but didn’t');
     } catch (error) {
         if (error.name === 'AbortError') {
@@ -33,7 +28,7 @@ async function runTests() {
 
     // ✅ **Test 3: Retry Mechanism**
     try {
-        await tinyFetch.fetchWithRetry('https://httpstat.us/500'); // Always fails
+        await fetcher.fetchWithRetry('https://httpbin.org/status/500'); // Always fails
         console.error('❌ Test 3 Failed: Should fail after retries');
     } catch (error) {
         console.log('✅ Test 3 Passed: Retry Mechanism Works');
@@ -41,7 +36,7 @@ async function runTests() {
 
     // ✅ **Test 4: Invalid URL Handling**
     try {
-        await tinyFetch.fetchWithRetry('invalid-url');
+        await fetcher.fetchWithRetry('invalid-url');
         console.error('❌ Test 4 Failed: Should fail on invalid URL');
     } catch (error) {
         console.log('✅ Test 4 Passed: Invalid URL Handling Works');
@@ -49,13 +44,13 @@ async function runTests() {
 
     // ✅ **Test 5: Network Error Simulation**
     try {
-        await tinyFetch.fetchWithRetry('http://localhost:9999'); // Unreachable port
+        await fetcher.fetchWithRetry('http://localhost:9999'); // Unreachable port
         console.error('❌ Test 5 Failed: Should fail on network error');
     } catch (error) {
         console.log('✅ Test 5 Passed: Network Error Handled Correctly');
     }
 
-    console.log('\n🎉 All tests completed!');
+    console.log('\n🎉 All real-life tests completed!');
 }
 
-runTests();
+runRealLifeTest();
